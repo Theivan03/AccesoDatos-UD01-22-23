@@ -56,7 +56,7 @@ public class Main {
         xStream.processAnnotations(Lugar.class);
         xStream.processAnnotations(Hotel.class);
 
-        xStream.addImplicitCollection(Viaje.class,"etapas");
+        xStream.addImplicitCollection(Viaje.class,"estapas");
         xStream.addImplicitCollection(Etapa.class,"puntosVisita");
 
         xStream.toXML(viajes, new FileOutputStream("src/main/resources/viajes.xml"));

@@ -1,8 +1,11 @@
 package org.example;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import java.io.Serializable;
 import java.util.List;
 
+@XStreamAlias("Etapa")
 public class Etapa implements Serializable {
 
     private Lugar destino;
