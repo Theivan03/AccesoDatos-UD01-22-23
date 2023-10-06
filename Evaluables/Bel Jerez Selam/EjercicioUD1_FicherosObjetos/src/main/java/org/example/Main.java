@@ -15,8 +15,7 @@ public class Main {
         int menu;
         do {
             System.out.println("--------------------------------------------------------------");
-            menu = Libreria.createMenu("1. Insertar Pelicula", "2. Modificar Pelicula",
-                    "3. Eliminar Pelicula", "4. Visualizar Pelicula", "5. Mostrar todas las peliculas", "6. Salir");
+            menu = Libreria.createMenu("1. Insertar Pelicula", "2. Modificar Pelicula", "3. Eliminar Pelicula", "4. Visualizar Pelicula", "5. Mostrar todas las peliculas", "6. Salir");
             System.out.println("--------------------------------------------------------------\n");
             switch (menu) {
                 case 1:
@@ -43,7 +42,7 @@ public class Main {
     private static void mostrarTodasLasPeliculas() {
         ArrayList<Pelicula> peliculas = leerFichero();
 
-        if (peliculas.isEmpty()){
+        if (peliculas.isEmpty()) {
             System.out.println("No hay peliculas actualmente");
             return;
         }
@@ -56,7 +55,7 @@ public class Main {
 
     private static void visualizarPeliculas() {
         ArrayList<Pelicula> peliculas = leerFichero();
-        if (peliculas.isEmpty()){
+        if (peliculas.isEmpty()) {
             System.out.println("No hay peliculas actualmente");
             return;
         }
@@ -75,7 +74,7 @@ public class Main {
 
     private static void eliminarPelicula() {
         ArrayList<Pelicula> peliculas = leerFichero();
-        if (peliculas.isEmpty()){
+        if (!peliculas.isEmpty()) {
             System.out.println("No hay peliculas actualmente");
             return;
         }
@@ -97,7 +96,7 @@ public class Main {
 
     private static void modificarPelicula() {
         ArrayList<Pelicula> peliculas = leerFichero();
-        if (peliculas.isEmpty()){
+        if (peliculas.isEmpty()) {
             System.out.println("No hay peliculas actualmente");
             return;
         }
@@ -134,6 +133,7 @@ public class Main {
 
     /**
      * Se encarga de actualizar el fichero con el nuevo ArrayList
+     *
      * @param listaPelis el ArrayList a introducir en el fichero
      */
     private static void introducirPelicula(ArrayList<Pelicula> listaPelis) {
@@ -148,6 +148,7 @@ public class Main {
 
     /**
      * Método que se encarga de actualizar en un ArrayList las peliculas guardas actualmente en el fichero
+     *
      * @return el ArrayList con las peliculas
      */
     private static ArrayList<Pelicula> leerFichero() {
@@ -181,7 +182,8 @@ public class Main {
 
     /**
      * Un método para buscar una pelicula por el título
-     * @param peliculas el ArrayList en el que buscará
+     *
+     * @param peliculas   el ArrayList en el que buscará
      * @param peliABuscar el String dle titulo que buscará
      * @return La pelicula con el título, en null si no la encuentra
      */
