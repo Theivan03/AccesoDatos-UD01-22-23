@@ -1,13 +1,18 @@
 package org.example;
 
-public class Hotel {
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+import java.io.Serializable;
+
+@XStreamAlias("Hotel")
+public class Hotel implements Serializable {
     private String nombre;
     private String direccion;
     private double precio;
 
     public Hotel() {
     }
-
+    private static final long serialVersionUID=439729502623497460L;
     public Hotel(String nombre, String direccion, double precio) {
         this.nombre = nombre;
         this.direccion = direccion;

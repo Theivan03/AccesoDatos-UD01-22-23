@@ -1,14 +1,18 @@
 package org.example;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.List;
-
-public class Viaje {
+@XStreamAlias("Viaje")
+public class Viaje implements Serializable {
     private LocalDate fechaSalida;
     private LocalDate fechaLlegada;
     private List<Etapa> etapa;
     private Lugar salida;
 
+    private static final long serialVersionUID=8860155335702972022L;
     public Viaje() {
     }
 
