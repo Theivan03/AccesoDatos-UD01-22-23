@@ -1,0 +1,18 @@
+<list>
+  <Viaje>
+    <fechaSalida>2023-10-04</fechaSalida>
+    <fechaLlegada>2023-10-04</fechaLlegada>
+    <salida>
+      <ciudad>Crevillent</ciudad>
+      <pais>España</pais>
+    </salida>
+  </Viaje>
+  <Viaje>
+    <fechaSalida>2023-10-04</fechaSalida>
+    <fechaLlegada>2023-10-04</fechaLlegada>
+    <salida>
+      <ciudad>Elche</ciudad>
+      <pais>España</pais>
+    </salida>
+  </Viaje>
+</list>

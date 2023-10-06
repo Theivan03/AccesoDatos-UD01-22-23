@@ -1,8 +1,9 @@
 package org.example;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class Etapa {
+public class Etapa implements Serializable {
 
     private Lugar destino;
     private Hotel hotel;

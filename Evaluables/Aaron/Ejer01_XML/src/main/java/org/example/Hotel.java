@@ -1,6 +1,8 @@
 package org.example;
 
-public class Hotel {
+import java.io.Serializable;
+
+public class Hotel implements Serializable {
 
     private String nombre;
     private String direccion;

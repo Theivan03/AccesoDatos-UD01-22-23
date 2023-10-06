@@ -1,6 +1,8 @@
 package org.example;
 
-public class Lugar {
+import java.io.Serializable;
+
+public class Lugar implements Serializable {
 
     private String ciudad;
     private String pais;
