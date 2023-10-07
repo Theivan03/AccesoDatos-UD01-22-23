@@ -101,31 +101,22 @@ public class Main {
         System.out.println("Introduce formato: ");
         pelicula.setFormato(sc.nextLine());
 
-
         return pelicula;
     }
 
     public static List<Pelicula> LeerPeliculasFichero() throws IOException {
-
         List<Pelicula> listaPeliculas = new ArrayList<>();
-
         try {
-
             File archivo = new File("src/main/resources/peliculas.dat");
             FileInputStream fileInputStream = new FileInputStream(archivo);
             ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-
-            while (true) {
-                try {
-                    listaPeliculas = (List<Pelicula>) objectInputStream.readObject();
-                } catch (EOFException eofex) {
-                    System.out.println("Error lectura: " + eofex.getMessage());
-                    objectInputStream.close();
-                    break;
-                }
+            try {
+                listaPeliculas = (List<Pelicula>) objectInputStream.readObject();
+            } catch (EOFException eofex) {
+                System.out.println("Error lectura: " + eofex.getMessage());
+                objectInputStream.close();
             }
             objectInputStream.close();
-
         } catch (IOException ioex) {
             System.out.println("Error: " + ioex.getMessage());
             listaPeliculas = null;
@@ -134,7 +125,6 @@ public class Main {
             listaPeliculas = null;
         }
         return listaPeliculas;
-
     }
 
     public static void InsertarObjetos() {
@@ -173,10 +163,6 @@ public class Main {
             String nuevoFormato;
             boolean buscarPelicula = false;
 
-            File archivo = new File("src/main/resources/peliculas.dat");
-            FileOutputStream fileOutputStream = new FileOutputStream(archivo);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-
             listaPelicula = LeerPeliculasFichero();
 
 
@@ -191,6 +177,9 @@ public class Main {
             }
 
             //escribir nueva lista
+            File archivo = new File("src/main/resources/peliculas.dat");
+            FileOutputStream fileOutputStream = new FileOutputStream(archivo);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(listaPelicula);
 
             if (!buscarPelicula) {
@@ -213,21 +202,22 @@ public class Main {
         try {
             boolean buscarPelicula = false;
 
-            File archivo = new File("src/main/resources/peliculas.dat");
-            FileOutputStream fileOutputStream = new FileOutputStream(archivo);
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
 
             listaPelicula = LeerPeliculasFichero();
 
             for (Pelicula pelicula : listaPelicula) {
                 if (pelicula.getTitulo().equalsIgnoreCase(tituloPelicula)) {
                     listaPelicula.remove(pelicula);
+                    System.out.println("pelicula eliminada.");
                     buscarPelicula = true;
                     break;
                 }
             }
 
             //escribir nueva lista
+            File archivo = new File("src/main/resources/peliculas.dat");
+            FileOutputStream fileOutputStream = new FileOutputStream(archivo);
+            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
             objectOutputStream.writeObject(listaPelicula);
 
             if (!buscarPelicula) {
@@ -242,7 +232,6 @@ public class Main {
         } catch (Exception ex) {
             System.out.println("ERror: " + ex.getMessage());
         }
-
     }
 
     public static void VisualizarPelicula(String tituloPelicula) {
@@ -250,7 +239,6 @@ public class Main {
         List<Pelicula> listaPelicula;
         try {
             boolean buscarPelicula = false;
-
 
             listaPelicula = LeerPeliculasFichero();
 
@@ -269,8 +257,6 @@ public class Main {
         } catch (Exception ex) {
             System.out.println("ERror: " + ex.getMessage());
         }
-
     }
-
 
 }

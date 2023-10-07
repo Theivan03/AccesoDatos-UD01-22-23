@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7a6a318-3a21-490a-811e-58d308124c15" name="Changes" comment="sigue sin funcionar, actualizo codigo por si he cambiado algo importante">
+    <list default="true" id="b7a6a318-3a21-490a-811e-58d308124c15" name="Changes" comment="sigue sin funcionar, actualizo codigo">
+      <change beforePath="$PROJECT_DIR$/../AAC_AaronCutillas_Ejercico02.rar" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
@@ -27,15 +28,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Aaron/Desktop/Aaron/Evaluables/Aaron/PersistenciaObjetos",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Aaron/Desktop/Aaron/Evaluables/Aaron/PersistenciaObjetos&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -61,12 +62,21 @@
       <option name="project" value="LOCAL" />
       <updated>1696289234621</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="sigue sin funcionar, actualizo codigo">
+      <option name="closed" value="true" />
+      <created>1696335044103</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696335044103</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="todavia no funciona, creo que no estoy almacenando bien los datos" />
     <MESSAGE value="sigue sin funcionar, actualizo codigo por si he cambiado algo importante" />
-    <option name="LAST_COMMIT_MESSAGE" value="sigue sin funcionar, actualizo codigo por si he cambiado algo importante" />
+    <MESSAGE value="sigue sin funcionar, actualizo codigo" />
+    <option name="LAST_COMMIT_MESSAGE" value="sigue sin funcionar, actualizo codigo" />
   </component>
 </project>
