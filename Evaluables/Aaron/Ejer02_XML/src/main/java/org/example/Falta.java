@@ -1,21 +1,24 @@
 package org.example;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import java.time.LocalDate;
 
+@XStreamAlias("falta")
 public class Falta {
-    private LocalDate fecha;
+    private String fecha;
     private String razon;
 
-    public Falta(LocalDate fecha, String razon) {
+    public Falta(String fecha, String razon) {
         this.fecha = fecha;
         this.razon = razon;
     }
 
-    public LocalDate getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(LocalDate fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 

@@ -1,30 +1,32 @@
 package org.example;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
 import java.util.List;
 
 @XStreamAlias("institutos")
 public class Institutos {
 
-    private List<Instituto> institutos;
+    @XStreamImplicit(itemFieldName="instituto")
+    private List<Instituto> instituto;
 
-    public Institutos(List<Instituto> institutos) {
-        this.institutos = institutos;
+    public Institutos(List<Instituto> instituto) {
+        this.instituto = instituto;
     }
 
-    public List<Instituto> getInstitutos() {
-        return institutos;
+    public List<Instituto> getInstituto() {
+        return instituto;
     }
 
-    public void setInstitutos(List<Instituto> institutos) {
-        this.institutos = institutos;
+    public void setInstituto(List<Instituto> instituto) {
+        this.instituto = instituto;
     }
 
     @Override
     public String toString() {
         return "Institutos{" +
-                "institutos=" + institutos +
+                "instituto=" + instituto +
                 '}';
     }
 }

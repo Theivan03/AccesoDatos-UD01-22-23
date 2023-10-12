@@ -1,19 +1,22 @@
 package org.example;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
 import java.time.LocalDate;
 
+@XStreamAlias("persona")
 public class Persona {
     private String dni;
     private String nombre;
     private String apellido1;
     private String apellido2;
-    private LocalDate fechaNacimiento;
+    private String fechaNacimiento;
     private double sueldoBruto;
 
     public Persona() {
     }
 
-    public Persona(String dni, String nombre, String apellido1, String apellido2, LocalDate fechaNacimiento, double sueldoBruto) {
+    public Persona(String dni, String nombre, String apellido1, String apellido2, String fechaNacimiento, double sueldoBruto) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellido1 = apellido1;
@@ -54,11 +57,11 @@ public class Persona {
         this.apellido2 = apellido2;
     }
 
-    public LocalDate getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(LocalDate fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 

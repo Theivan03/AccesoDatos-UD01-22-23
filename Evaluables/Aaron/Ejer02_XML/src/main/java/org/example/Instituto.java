@@ -1,10 +1,14 @@
 package org.example;
 
-import java.util.List;
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
+import java.util.List;
+@XStreamAlias("instituto")
 public class Instituto {
 
     private String nombre;
+    @XStreamImplicit(itemFieldName="persona")
     List<Persona> persona;
 
     public Instituto(String nombre, List<Persona> persona) {

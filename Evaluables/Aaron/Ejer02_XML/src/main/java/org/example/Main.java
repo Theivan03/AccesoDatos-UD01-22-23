@@ -13,6 +13,10 @@ public class Main {
     }
 
 
+    public static void createDat(){
+
+    }
+
     public static void readXML() throws FileNotFoundException {
 
         XStream xStream = new XStream();
@@ -25,15 +29,16 @@ public class Main {
         xStream.processAnnotations(Historial.class);
         xStream.processAnnotations(Falta.class);
 
-        xStream.addImplicitCollection(Institutos.class,"institutos");
+        xStream.addImplicitCollection(Institutos.class,"instituto");
         xStream.addImplicitCollection(Instituto.class,"persona");
         xStream.addImplicitCollection(Profesor.class,"historial");
         xStream.addImplicitCollection(Profesor.class,"falta");
-        xStream.addImplicitCollection(Historial.class,"asignatura");
+//        xStream.addImplicitCollection(Historial.class,"asignatura");
+
 
 
         xStream.allowTypes(new Class[] {
-                Institutos.class,
+                org.example.Institutos.class,
                 org.example.Instituto.class,
                 org.example.Persona.class,
                 org.example.Profesor.class,
@@ -42,10 +47,10 @@ public class Main {
                 org.example.Falta.class
         });
 
-//        Institutos lista = (Institutos) xStream.fromXML( new FileInputStream("src/main/resources/instituto.xml"));
-//
-//        for (Instituto instituto: lista.getInstitutos()) {
-//            System.out.println(instituto);
-//        }
+        Institutos lista = (Institutos) xStream.fromXML( new FileInputStream("src/main/resources/instituto.xml"));
+
+        for (Instituto instituto: lista.getInstituto()) {
+            System.out.println(instituto);
+        }
     }
 }

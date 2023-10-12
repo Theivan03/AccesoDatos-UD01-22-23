@@ -1,10 +1,15 @@
 package org.example;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+import com.thoughtworks.xstream.annotations.XStreamImplicit;
+
 import java.util.List;
 
+@XStreamAlias("historial")
 public class Historial {
     private String nombreInstituto;
     private int anyoAcademico;
+    @XStreamImplicit(itemFieldName="asignatura")
     private List<String> asignatura;
 
     public Historial(String nombreInstituto, int anyoAcademico, List<String> asignatura) {
