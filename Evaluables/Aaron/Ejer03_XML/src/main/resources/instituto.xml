@@ -1,4 +1,4 @@
-<list>
+<institutos>
   <instituto>
     <nombre>IES Macià Abela</nombre>
     <profesor>
@@ -253,4 +253,4 @@
       <falta reference="../../profesor/falta[2]"/>
     </profesor>
   </instituto>
-</list>
+</institutos>

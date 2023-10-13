@@ -3,40 +3,21 @@ package org.example;
 
 import com.thoughtworks.xstream.XStream;
 
-import java.io.*;
-import java.util.List;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws FileNotFoundException {
 
-        File ruta = new File("src/main/resources/institutos.dat");
-        ruta.createNewFile();
-
-
-        createDat(readXML());
-
-
+    readXML();
     }
 
 
-    public static void createDat(Institutos institutos) throws IOException {
-
-        try {
-
-            FileOutputStream fileOutputStream = new FileOutputStream("src/main/resources/institutos.dat");
-            ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
-
-            objectOutputStream.writeObject(institutos);
-
-
-        } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-
+    public static void createDat(){
 
     }
 
-    public static Institutos readXML() throws FileNotFoundException {
+    public static void readXML() throws FileNotFoundException {
 
         XStream xStream = new XStream();
 
@@ -48,14 +29,15 @@ public class Main {
         xStream.processAnnotations(Historial.class);
         xStream.processAnnotations(Falta.class);
 
-        xStream.addImplicitCollection(Institutos.class, "instituto");
-        xStream.addImplicitCollection(Instituto.class, "persona");
-        xStream.addImplicitCollection(Profesor.class, "historial");
-        xStream.addImplicitCollection(Profesor.class, "falta");
+        xStream.addImplicitCollection(Institutos.class,"instituto");
+        xStream.addImplicitCollection(Instituto.class,"persona");
+        xStream.addImplicitCollection(Profesor.class,"historial");
+        xStream.addImplicitCollection(Profesor.class,"falta");
 //        xStream.addImplicitCollection(Historial.class,"asignatura");
 
 
-        xStream.allowTypes(new Class[]{
+
+        xStream.allowTypes(new Class[] {
                 org.example.Institutos.class,
                 org.example.Instituto.class,
                 org.example.Persona.class,
@@ -65,10 +47,10 @@ public class Main {
                 org.example.Falta.class
         });
 
-        Institutos lista = (Institutos) xStream.fromXML(new FileInputStream("src/main/resources/instituto.xml"));
+        Institutos lista = (Institutos) xStream.fromXML( new FileInputStream("src/main/resources/instituto.xml"));
 
-        return lista;
-
-
+        for (Instituto instituto: lista.getInstituto()) {
+            System.out.println(instituto);
+        }
     }
 }
