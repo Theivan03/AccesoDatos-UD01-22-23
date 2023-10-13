@@ -2,10 +2,11 @@ package org.example;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 @XStreamAlias("persona")
-public class Persona {
+public class Persona implements Serializable {
     private String dni;
     private String nombre;
     private String apellido1;

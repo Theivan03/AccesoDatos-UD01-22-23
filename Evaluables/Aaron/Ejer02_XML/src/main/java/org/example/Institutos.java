@@ -3,10 +3,11 @@ package org.example;
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 import com.thoughtworks.xstream.annotations.XStreamImplicit;
 
+import java.io.Serializable;
 import java.util.List;
 
 @XStreamAlias("institutos")
-public class Institutos {
+public class Institutos implements Serializable {
 
     @XStreamImplicit(itemFieldName="instituto")
     private List<Instituto> instituto;
