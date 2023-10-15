@@ -15,47 +15,40 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int opcion;
         String nombreFichero;
-        boolean repetir = false;
 
-//        do{
-//            do {
-//                System.out.println("Introduce un numero entre 1 y 5: ");
-//                opcion = sc.nextInt();
-//            }while (opcion<1 || opcion>5);
-//
-//            switch (opcion){
-//                case 1:
-//                    System.out.println("Introduce el nombre del fichero XML: ");
-//                    nombreFichero = sc.nextLine();
-        //createDat(nombreFichero);
-//                    break;
-//                case 2:
-//                    System.out.println("Introduce el nombre del fichero DAT: ");
-//                    nombreFichero = sc.nextLine();
-        //createXML(nombreFichero);
-//                    break;
-//                case 3:
-//                    System.out.println("Introduce el nombre del fichero XML: ");
-//                    nombreFichero = sc.nextLine();
-//                    break;
-//                case 4:
-//                    System.out.println("Introduce el nombre del fichero DAT: ");
-//                    nombreFichero = sc.nextLine();
-//                    break;
-//                case 5:
-//                    System.out.println("Fin de programa.");
-//                    break;
-//            }
-//
-//        }while (opcion!=5);
+        do{
+            do {
+                System.out.println("Introduce un numero entre 1 y 5: ");
+                opcion = sc.nextInt();
+            }while (opcion<1 || opcion>5);
+            sc.nextLine();
+            switch (opcion){
+                case 1:
+                    System.out.println("Introduce el nombre del fichero XML(crear .dat): ");
+                    nombreFichero = sc.nextLine();
+                    createDat(nombreFichero);
+                    break;
+                case 2:
+                    System.out.println("Introduce el nombre del fichero DAT(crear .xml): ");
+                    nombreFichero = sc.nextLine();
+                    createXML(nombreFichero);
+                    break;
+                case 3:
+                    System.out.println("Introduce el nombre del fichero XML: ");
+                    nombreFichero = sc.nextLine();
+                    mostrarXML(nombreFichero);
+                    break;
+                case 4:
+                    System.out.println("Introduce el nombre del fichero DAT: ");
+                    nombreFichero = sc.nextLine();
+                    mostrarDat(nombreFichero);
+                    break;
+                case 5:
+                    System.out.println("Fin de programa.");
+                    break;
+            }
 
-        System.out.println("Nombre: ");
-        nombreFichero = sc.nextLine();
-        createDat(nombreFichero);
-        System.out.println("Nombre: ");
-        nombreFichero = sc.nextLine();
-        mostrarDat(nombreFichero);
-
+        }while (opcion!=5);
 
     }
 
@@ -121,7 +114,7 @@ public class Main {
 
         }
 
-            //escritura
+        //escritura
         try {
             FileOutputStream fileOutputStream = new FileOutputStream(rutaDat);
             ObjectOutputStream objectOutputStream = new ObjectOutputStream(fileOutputStream);
@@ -186,6 +179,8 @@ public class Main {
             nuevaListaInstitutos.add(instituto);
 
         }
+
+
         for (Instituto instituto : datListaInstitutos.getInstituto()) {
             nuevaListaInstitutos.add(instituto);
         }
