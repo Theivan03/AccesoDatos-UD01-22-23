@@ -2,11 +2,14 @@ package model.repository.Tenista;
 
 import model.entity.Tenista;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
 
 public class TenistaRepository implements ITenistaRepository {
-    public TenistaRepository() {
+
+    @Override
+    public void save(Tenista entity) {
     }
 
     @Override
@@ -19,15 +22,24 @@ public class TenistaRepository implements ITenistaRepository {
         return null;
     }
 
-
     @Override
-    public boolean update(UUID id) {
+    public boolean delete(UUID id) {
         return false;
     }
 
     @Override
-    public void save(UUID id) {
+    public boolean update(Tenista entity) {
+        return false;
+    }
 
+    @Override
+    public boolean addTorneoGanado(String codTenista, String codTorneo) {
+        return false;
+    }
+
+    @Override
+    public boolean addContrato(String codSponsor, String codTenista, LocalDate fechaInicio, LocalDate fechaFinal, double saldo) {
+        return false;
     }
 }
 
