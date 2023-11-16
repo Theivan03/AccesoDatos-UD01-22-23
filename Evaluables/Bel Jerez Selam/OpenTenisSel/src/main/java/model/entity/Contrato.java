@@ -23,13 +23,7 @@ public class Contrato {
 
     @Override
     public String toString() {
-        return "Contrato{" +
-                "codigo=" + codigo +
-                ", fechaInicio=" + fechaInicio +
-                ", fechaFin=" + fechaFin +
-                ", sueldo=" + sueldo +
-                ", codSponsor=" + codSponsor +
-                '}';
+        return String.format("Código: %s\nFecha de Inicio: %s\nFecha de Fin: %s\nSueldo: %.2f\nCodigo de Sponsor: %s", codigo, fechaInicio.toString(), fechaFin.toString(), sueldo, codSponsor);
     }
 
     public UUID getCodigo() {

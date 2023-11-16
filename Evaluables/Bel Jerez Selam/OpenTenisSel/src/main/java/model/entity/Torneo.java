@@ -21,12 +21,7 @@ public class Torneo {
 
     @Override
     public String toString() {
-        return "Torneo{" +
-                "codigo=" + codigo +
-                ", nombre='" + nombre + '\'' +
-                ", puntos=" + puntos +
-                ", premio=" + premio +
-                '}';
+        return String.format("Código: %s\nNombre: %-15s\nPuntos: %05d\nPremio: %.2f", codigo, nombre, puntos,premio);
     }
 
     public UUID getCodigo() {

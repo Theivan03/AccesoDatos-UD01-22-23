@@ -14,10 +14,7 @@ public class Sponsor {
 
     @Override
     public String toString() {
-        return "Sponsor{" +
-                "codigo=" + codigo +
-                ", nombre='" + nombre + '\'' +
-                '}';
+        return String.format("Código: %s\nNombre: %-15s", codigo, nombre);
     }
 
     public int getCodigo() {
